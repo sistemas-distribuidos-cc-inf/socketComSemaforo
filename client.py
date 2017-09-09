@@ -1,23 +1,21 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Socket Python Doc: https://docs.python.org/2.7/library/socket.html
-
-# Importe o pacote do socket.
 import socket
+from scbl import BufferLimitado
 
-# Cria um objeto socket por padrão TCP/IP.
+b = BufferLimitado()
+
 sock = socket.socket()
-
-# Defina a porta na qual você deseja se conectar.
 port = 12345
-
-# Conecte ao servidor que está executando localmente.
 sock.connect(('127.0.0.1', port))
 
-# Receba os dados do servidor.
-buffer_size = 1024
-print sock.recv(buffer_size)
+#def consumidor():
+#   while True:
+#      time.sleep(2)
+#      item = b.remove()
+#      print "CONSUMIDOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ",  b.cheio
+#      print "_________________"
+#
 
-# Feche a conexão.
 sock.close()

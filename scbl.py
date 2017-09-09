@@ -29,25 +29,25 @@ class BufferLimitado:
       self.empty.release()
       return item
 
-b = BufferLimitado()
-
-def produtor():
-   item = 0
-   while True:
-      time.sleep(2)
-      item = item + 1
-      b.insert(item)
-      print "PRODUTOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ", b.cheio
-      print "_________________"
-
-def consumidor():
-   while True:
-      time.sleep(2)
-      item = b.remove()
-      print "CONSUMIDOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ",  b.cheio
-      print "_________________"
-
-thread.start_new_thread(produtor, ())
-thread.start_new_thread(consumidor, ())
-
-while 1: pass
+#b = BufferLimitado()
+#
+#def produtor():
+#   item = 0
+#   while True:
+#      time.sleep(2)
+#      item = item + 1
+#      b.insert(item)
+#      print "PRODUTOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ", b.cheio
+#      print "_________________"
+#
+#def consumidor():
+#   while True:
+#      time.sleep(2)
+#      item = b.remove()
+#      print "CONSUMIDOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ",  b.cheio
+#      print "_________________"
+#
+#thread.start_new_thread(produtor, ())
+#thread.start_new_thread(consumidor, ())
+#
+#while 1: pass
