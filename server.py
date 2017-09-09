@@ -1,41 +1,36 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# Socket Python Doc: https://docs.python.org/2.7/library/socket.html
-
-# Importe o pacote do socket.
 import socket
+import time
+from scbl import BufferLimitado
 
-# Cria um objecto socket por padrão TCP/IP.
+b = BufferLimitado()
 sock = socket.socket()
-print "Socket successfully created"
+print "Socket criado"
 
-# Reserve a porta na qual deseja aceitar conexões.
 port = 12345
-
-# Ative a porta para o servidor
+tamanhoAtualBuffer = b.livre
 sock.bind(('localhost', port))
-print "Socket binded to %s" %(port)
+print "Socket associado à porta %s" %(port)
 
-# Coloque o socket no modo de listening (escuta de conexão).
 sock.listen(5)
-print "Socket is listening"
+print "Socket está rodando"
+print tamanhoAtualBuffer
 
-# Espere estabelecer conexão com um cliente.
-#conn, addr = sock.accept()
-#print 'Got connection from', addr
+def produzir():
+    item = 0
+    while tamanhoAtualBuffer < 10:
+        time.sleep(2)
+        item = item + 1
+        b.insert(item)
+        print "PRODUTOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ", b.cheio
 
-# Envie uma mensagem para o cliente.
-#conn.send('Thank you for connecting')
+produzir()
 
-#now keep talking with the client
-count = 0
 while 1:
-    #wait to accept a connection - blocking call
     conn, addr = sock.accept()
     conn.send('Thank you for connecting')
     print 'Connected with ' + addr[0] + ':' + str(addr[1])
-    count = count + 1
-    print count 
-    if count == 2:
-        sock.close()
+
+# sock.close()
