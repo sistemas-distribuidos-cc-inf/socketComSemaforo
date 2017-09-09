@@ -22,8 +22,8 @@ sock.listen(5)
 print "Socket is listening"
 
 # Espere estabelecer conexão com um cliente.
-conn, addr = sock.accept()
-print 'Got connection from', addr
+#conn, addr = sock.accept()
+#print 'Got connection from', addr
 
 # Envie uma mensagem para o cliente.
 #conn.send('Thank you for connecting')
