@@ -18,7 +18,7 @@ sock.bind(('localhost', port))
 print "Socket binded to %s" %(port)
 
 # Coloque o socket no modo de listening (escuta de conexão).
-sock.listen(1)
+sock.listen(5)
 print "Socket is listening"
 
 # Espere estabelecer conexão com um cliente.
@@ -26,7 +26,16 @@ conn, addr = sock.accept()
 print 'Got connection from', addr
 
 # Envie uma mensagem para o cliente.
-conn.send('Thank you for connecting')
+#conn.send('Thank you for connecting')
 
-# Feche a conexão com o cliente.
-conn.close()
+#now keep talking with the client
+count = 0
+while 1:
+    #wait to accept a connection - blocking call
+    conn, addr = sock.accept()
+    conn.send('Thank you for connecting')
+    print 'Connected with ' + addr[0] + ':' + str(addr[1])
+    count = count + 1
+    print count 
+    if count == 2:
+        sock.close()
