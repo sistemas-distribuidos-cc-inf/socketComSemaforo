@@ -6,7 +6,7 @@ from scbl import BufferLimitado
 
 b = BufferLimitado()
 
-sock = socket.socket()
+sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 port = 12345
 sock.connect(('127.0.0.1', port))
 
