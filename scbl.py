@@ -7,7 +7,7 @@ class BufferLimitado:
    TAM_BUFFER = 10
    mutex  = threading.Semaphore(1)
    empty  = threading.Semaphore(TAM_BUFFER)
-   full   = threading.Semaphore(0)
+   full   = threading.Semaphore(10)
    buffer = range(TAM_BUFFER)
    cheio  = 0
    livre  = 0
