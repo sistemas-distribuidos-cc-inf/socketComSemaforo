@@ -15,7 +15,7 @@ print tamanhoAtualBuffer #opcional
 
 def consumidor():
     while tamanhoAtualBuffer<10: #pode ser com o True também, por algum motivo não está parando
-      time.sleep(5)
+      time.sleep(2)
       item = b.remove()
       print " CONSUMIDOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ",  b.cheio
 
