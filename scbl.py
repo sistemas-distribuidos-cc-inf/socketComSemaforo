@@ -4,10 +4,10 @@ import time, random
 import threading
 
 class BufferLimitado:
-   TAM_BUFFER = 10
+   TAM_BUFFER = 25
    mutex  = threading.Semaphore(1)
    empty  = threading.Semaphore(TAM_BUFFER)
-   full   = threading.Semaphore(10)
+   full   = threading.Semaphore(20)
    buffer = range(TAM_BUFFER)
    cheio  = 0
    livre  = 0
@@ -29,25 +29,4 @@ class BufferLimitado:
       self.empty.release()
       return item
 
-#b = BufferLimitado()
-#
-#def produtor():
-#   item = 0
-#   while True:
-#      time.sleep(2)
-#      item = item + 1
-#      b.insert(item)
-#      print "PRODUTOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ", b.cheio
-#      print "_________________"
-#
-#def consumidor():
-#   while True:
-#      time.sleep(2)
-#      item = b.remove()
-#      print "CONSUMIDOR. item: ", item, " b.livre: ", b.livre, " b.cheio: ",  b.cheio
-#      print "_________________"
-#
-#thread.start_new_thread(produtor, ())
-#thread.start_new_thread(consumidor, ())
-#
-#while 1: pass
+
