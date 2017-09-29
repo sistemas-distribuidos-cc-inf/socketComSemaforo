@@ -4,10 +4,10 @@ import time, random
 import threading
 
 class BufferLimitado:
-   TAM_BUFFER = 25
+   TAM_BUFFER = 5
    mutex  = threading.Semaphore(1)
    empty  = threading.Semaphore(TAM_BUFFER)
-   full   = threading.Semaphore(20)
+   full   = threading.Semaphore(2)
    buffer = range(TAM_BUFFER)
    cheio  = 0
    livre  = 0
