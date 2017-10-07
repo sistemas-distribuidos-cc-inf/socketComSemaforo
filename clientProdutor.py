@@ -11,7 +11,7 @@ conn = sock.connect(('127.0.0.1', port))
 tamArr = len(arr)
 while tamArr > 0:
     print arr.pop()
-    #sock.send('Produzir ' + arr.pop())
+    sock.send('Produzir ' + arr.pop())
     #sock.send('Produzir ' + arr.pop())
     tamArr = len(arr)
 
