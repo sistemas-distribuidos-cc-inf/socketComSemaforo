@@ -4,7 +4,7 @@ import time, random
 import threading
 
 class BufferLimitado:
-   TAM_BUFFER = 10
+   TAM_BUFFER = 5
    mutex  = threading.Semaphore(1)
    empty  = threading.Semaphore(TAM_BUFFER)
    full   = threading.Semaphore(0)

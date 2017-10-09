@@ -3,8 +3,6 @@
 
 import socket
 import thread
-import time
-from random import randint
 from scbl import BufferLimitado
 
 b = BufferLimitado()
@@ -36,12 +34,11 @@ while 1:
     arrAcao = msg.split()
     acao = arrAcao[0]
     print 'Ação: ' + acao
-    item = ''
-    if arrAcao[1]:
-        item = arrAcao[1]
+    item = arrAcao[1]
     print 'Item: ' + item
-    if acao.index('Produzir') == 0:
+    if acao == 'Produzir':
         thread.start_new_thread(produzir, (item, ))
-#    if acao.index('Consumir') == 0:
-#        res = thread.start_new_thread(consumidor, ())
-#        conn.send(res)
+    elif acao == 'Consumir':
+        res = thread.start_new_thread(consumidor, ())
+        print res
+        conn.send(str(res))
