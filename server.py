@@ -18,12 +18,12 @@ print "Socket está rodando"
 
 def produzir(item):
     b.insert(item)
-    print "PRODUTOR. item: ", item #, " b.livre: ", b.livre, " b.cheio: ", b.cheio
+    print "PRODUTOR. item: ", item , " b.livre: ", b.livre, " b.cheio: ", b.cheio
 
 def consumidor():
     item = b.remove()
+    print " CONSUMIDOR. item: ", item , " b.livre: ", b.livre, " b.cheio: ",  b.cheio
     return item
-    #print " CONSUMIDOR. item: ", item #, " b.livre: ", b.livre, " b.cheio: ",  b.cheio
 
 
 
