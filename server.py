@@ -39,8 +39,7 @@ while 1:
     if acao == 'Produzir':
         thread.start_new_thread(produzir, (item, ))
     elif acao == 'Consumir':
-        thread.start_new_thread(consumidor, ())
-        res = thread.join()
+        res = thread.start_new_thread(consumidor, ())
         resStr = str(res)
-        print 'res ainda no server' + resStr
+        print 'res ainda no server: ' + resStr
         conn.send(resStr)

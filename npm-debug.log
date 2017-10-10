@@ -2,109 +2,676 @@
 1 verbose cli [ '/usr/local/bin/node',
 1 verbose cli   '/usr/local/bin/npm',
 1 verbose cli   'install',
-1 verbose cli   'colornote' ]
+1 verbose cli   'queue',
+1 verbose cli   '--save' ]
 2 info using npm@4.0.5
 3 info using node@v8.0.0-pre
 4 verbose config Skipping project config: /home/marcello/.npmrc. (matches userconfig)
 5 silly loadCurrentTree Starting
 6 silly install loadCurrentTree
 7 silly install readLocalPackageData
-8 silly fetchPackageMetaData colornote
-9 silly fetchNamedPackageData colornote
-10 silly mapToRegistry name colornote
+8 silly fetchPackageMetaData queue
+9 silly fetchNamedPackageData queue
+10 silly mapToRegistry name queue
 11 silly mapToRegistry using default registry
 12 silly mapToRegistry registry https://registry.npmjs.org/
 13 silly mapToRegistry data Result {
-13 silly mapToRegistry   raw: 'colornote',
+13 silly mapToRegistry   raw: 'queue',
 13 silly mapToRegistry   scope: null,
-13 silly mapToRegistry   escapedName: 'colornote',
-13 silly mapToRegistry   name: 'colornote',
+13 silly mapToRegistry   escapedName: 'queue',
+13 silly mapToRegistry   name: 'queue',
 13 silly mapToRegistry   rawSpec: '',
 13 silly mapToRegistry   spec: 'latest',
 13 silly mapToRegistry   type: 'tag' }
-14 silly mapToRegistry uri https://registry.npmjs.org/colornote
-15 verbose request uri https://registry.npmjs.org/colornote
+14 silly mapToRegistry uri https://registry.npmjs.org/queue
+15 verbose request uri https://registry.npmjs.org/queue
 16 verbose request no auth needed
-17 info attempt registry request try #1 at 2:15:51 AM
-18 verbose request id 4b3beb5954141251
-19 http request GET https://registry.npmjs.org/colornote
-20 http 404 https://registry.npmjs.org/colornote
-21 verbose headers { 'content-type': 'application/json',
-21 verbose headers   'cache-control': 'max-age=0',
-21 verbose headers   'content-length': '2',
+17 info attempt registry request try #1 at 12:20:31 AM
+18 verbose request id 67eeed28d64db5a3
+19 http request GET https://registry.npmjs.org/queue
+20 http 200 https://registry.npmjs.org/queue
+21 verbose headers { server: 'nginx/1.10.1',
+21 verbose headers   'content-type': 'application/json',
+21 verbose headers   'last-modified': 'Tue, 03 Oct 2017 14:54:06 GMT',
+21 verbose headers   etag: 'W/"59d3a48e-a331"',
+21 verbose headers   'content-encoding': 'gzip',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   'content-length': '6297',
 21 verbose headers   'accept-ranges': 'bytes',
-21 verbose headers   date: 'Tue, 12 Sep 2017 05:15:53 GMT',
+21 verbose headers   date: 'Tue, 10 Oct 2017 03:20:32 GMT',
 21 verbose headers   via: '1.1 varnish',
 21 verbose headers   age: '0',
 21 verbose headers   connection: 'keep-alive',
-21 verbose headers   'x-served-by': 'cache-gru17128-GRU',
+21 verbose headers   'x-served-by': 'cache-gru17120-GRU',
 21 verbose headers   'x-cache': 'MISS',
 21 verbose headers   'x-cache-hits': '0',
-21 verbose headers   'x-timer': 'S1505193352.420962,VS0,VE1359',
-21 verbose headers   vary: 'Accept-Encoding' }
-22 silly get cb [ 404,
-22 silly get   { 'content-type': 'application/json',
-22 silly get     'cache-control': 'max-age=0',
-22 silly get     'content-length': '2',
+21 verbose headers   'x-timer': 'S1507605632.841433,VS0,VE803',
+21 verbose headers   vary: 'Accept-Encoding, Accept' }
+22 silly get cb [ 200,
+22 silly get   { server: 'nginx/1.10.1',
+22 silly get     'content-type': 'application/json',
+22 silly get     'last-modified': 'Tue, 03 Oct 2017 14:54:06 GMT',
+22 silly get     etag: 'W/"59d3a48e-a331"',
+22 silly get     'content-encoding': 'gzip',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     'content-length': '6297',
 22 silly get     'accept-ranges': 'bytes',
-22 silly get     date: 'Tue, 12 Sep 2017 05:15:53 GMT',
+22 silly get     date: 'Tue, 10 Oct 2017 03:20:32 GMT',
 22 silly get     via: '1.1 varnish',
 22 silly get     age: '0',
 22 silly get     connection: 'keep-alive',
-22 silly get     'x-served-by': 'cache-gru17128-GRU',
+22 silly get     'x-served-by': 'cache-gru17120-GRU',
 22 silly get     'x-cache': 'MISS',
 22 silly get     'x-cache-hits': '0',
-22 silly get     'x-timer': 'S1505193352.420962,VS0,VE1359',
-22 silly get     vary: 'Accept-Encoding' } ]
-23 silly fetchPackageMetaData Error: Registry returned 404 for GET on https://registry.npmjs.org/colornote
-23 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
-23 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
-23 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
-23 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
-23 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
-23 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
-23 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
-23 silly fetchPackageMetaData     at emitOne (events.js:96:13)
-23 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
-23 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
-23 silly fetchPackageMetaData  error for colornote { Error: Registry returned 404 for GET on https://registry.npmjs.org/colornote
-23 silly fetchPackageMetaData     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
-23 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
-23 silly fetchPackageMetaData     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
-23 silly fetchPackageMetaData     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
-23 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
-23 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
-23 silly fetchPackageMetaData     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
-23 silly fetchPackageMetaData     at emitOne (events.js:96:13)
-23 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
-23 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12) pkgid: 'colornote', statusCode: 404, code: 'E404' }
-24 silly rollbackFailedOptional Starting
-25 silly rollbackFailedOptional Finishing
-26 silly runTopLevelLifecycles Finishing
-27 silly install printInstalled
-28 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/colornote
-28 verbose stack     at makeError (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
-28 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:280:14)
-28 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
-28 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:186:22)
-28 verbose stack     at emitTwo (events.js:106:13)
-28 verbose stack     at Request.emit (events.js:191:7)
-28 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1081:10)
-28 verbose stack     at emitOne (events.js:96:13)
-28 verbose stack     at Request.emit (events.js:188:7)
-28 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1001:12)
-29 verbose statusCode 404
-30 verbose pkgid colornote
-31 verbose cwd /home/marcello/socketComSemaforo
-32 error Linux 3.19.0-80-generic
-33 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "colornote"
-34 error node v8.0.0-pre
-35 error npm  v4.0.5
-36 error code E404
-37 error 404 Registry returned 404 for GET on https://registry.npmjs.org/colornote
-38 error 404
-39 error 404 'colornote' is not in the npm registry.
-40 error 404 You should bug the author to publish it (or use the name yourself!)
-41 error 404 Note that you can also install from a
-42 error 404 tarball, folder, http url, or git url.
-43 verbose exit [ 1, true ]
+22 silly get     'x-timer': 'S1507605632.841433,VS0,VE803',
+22 silly get     vary: 'Accept-Encoding, Accept' } ]
+23 verbose get saving queue to /home/marcello/.npm/registry.npmjs.org/queue/.cache.json
+24 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly resolveWithNewModule queue@4.4.1 checking installable status
+38 silly cache add args [ 'queue', null ]
+39 verbose cache add spec queue
+40 silly cache add parsed spec Result {
+40 silly cache add   raw: 'queue',
+40 silly cache add   scope: null,
+40 silly cache add   escapedName: 'queue',
+40 silly cache add   name: 'queue',
+40 silly cache add   rawSpec: '',
+40 silly cache add   spec: 'latest',
+40 silly cache add   type: 'tag' }
+41 silly addNamed queue@latest
+42 verbose addNamed "latest" is being treated as a dist-tag for queue
+43 info addNameTag [ 'queue', 'latest' ]
+44 silly mapToRegistry name queue
+45 silly mapToRegistry using default registry
+46 silly mapToRegistry registry https://registry.npmjs.org/
+47 silly mapToRegistry data Result {
+47 silly mapToRegistry   raw: 'queue',
+47 silly mapToRegistry   scope: null,
+47 silly mapToRegistry   escapedName: 'queue',
+47 silly mapToRegistry   name: 'queue',
+47 silly mapToRegistry   rawSpec: '',
+47 silly mapToRegistry   spec: 'latest',
+47 silly mapToRegistry   type: 'tag' }
+48 silly mapToRegistry uri https://registry.npmjs.org/queue
+49 verbose addNameTag registry:https://registry.npmjs.org/queue not in flight; fetching
+50 verbose get https://registry.npmjs.org/queue not expired, no request
+51 silly addNameTag next cb for queue with tag latest
+52 silly addNamed queue@4.4.1
+53 verbose addNamed "4.4.1" is a plain semver version for queue
+54 silly mapToRegistry name queue
+55 silly mapToRegistry using default registry
+56 silly mapToRegistry registry https://registry.npmjs.org/
+57 silly mapToRegistry data Result {
+57 silly mapToRegistry   raw: 'queue',
+57 silly mapToRegistry   scope: null,
+57 silly mapToRegistry   escapedName: 'queue',
+57 silly mapToRegistry   name: 'queue',
+57 silly mapToRegistry   rawSpec: '',
+57 silly mapToRegistry   spec: 'latest',
+57 silly mapToRegistry   type: 'tag' }
+58 silly mapToRegistry uri https://registry.npmjs.org/queue
+59 verbose addRemoteTarball https://registry.npmjs.org/queue/-/queue-4.4.1.tgz not in flight; adding
+60 verbose addRemoteTarball [ 'https://registry.npmjs.org/queue/-/queue-4.4.1.tgz',
+60 verbose addRemoteTarball   'ed93888335700f12dee55955b5a594cb82a1783b' ]
+61 info retry fetch attempt 1 at 12:20:32 AM
+62 info attempt registry request try #1 at 12:20:32 AM
+63 http fetch GET https://registry.npmjs.org/queue/-/queue-4.4.1.tgz
+64 http fetch 200 https://registry.npmjs.org/queue/-/queue-4.4.1.tgz
+65 silly fetchAndShaCheck shasum ed93888335700f12dee55955b5a594cb82a1783b
+66 verbose addTmpTarball /tmp/npm-13422-2e2bf67f/registry.npmjs.org/queue/-/queue-4.4.1.tgz not in flight; adding
+67 verbose addTmpTarball already have metadata; skipping unpack for queue@4.4.1
+68 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+69 silly cache afterAdd queue@4.4.1
+70 verbose afterAdd /home/marcello/.npm/queue/4.4.1/package/package.json not in flight; writing
+71 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+72 verbose afterAdd /home/marcello/.npm/queue/4.4.1/package/package.json written
+73 silly fetchNamedPackageData iconv
+74 silly mapToRegistry name iconv
+75 silly mapToRegistry using default registry
+76 silly mapToRegistry registry https://registry.npmjs.org/
+77 silly mapToRegistry data Result {
+77 silly mapToRegistry   raw: 'iconv',
+77 silly mapToRegistry   scope: null,
+77 silly mapToRegistry   escapedName: 'iconv',
+77 silly mapToRegistry   name: 'iconv',
+77 silly mapToRegistry   rawSpec: '',
+77 silly mapToRegistry   spec: 'latest',
+77 silly mapToRegistry   type: 'tag' }
+78 silly mapToRegistry uri https://registry.npmjs.org/iconv
+79 silly fetchNamedPackageData node-icu-charset-detector
+80 silly mapToRegistry name node-icu-charset-detector
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry data Result {
+83 silly mapToRegistry   raw: 'node-icu-charset-detector',
+83 silly mapToRegistry   scope: null,
+83 silly mapToRegistry   escapedName: 'node-icu-charset-detector',
+83 silly mapToRegistry   name: 'node-icu-charset-detector',
+83 silly mapToRegistry   rawSpec: '',
+83 silly mapToRegistry   spec: 'latest',
+83 silly mapToRegistry   type: 'tag' }
+84 silly mapToRegistry uri https://registry.npmjs.org/node-icu-charset-detector
+85 verbose request uri https://registry.npmjs.org/iconv
+86 verbose request no auth needed
+87 info attempt registry request try #1 at 12:20:33 AM
+88 verbose etag W/"59503922-a11a"
+89 verbose lastModified Sun, 25 Jun 2017 22:28:50 GMT
+90 http request GET https://registry.npmjs.org/iconv
+91 verbose request uri https://registry.npmjs.org/node-icu-charset-detector
+92 verbose request no auth needed
+93 info attempt registry request try #1 at 12:20:33 AM
+94 verbose etag W/"5731e613-4c62"
+95 verbose lastModified Tue, 10 May 2016 13:45:55 GMT
+96 http request GET https://registry.npmjs.org/node-icu-charset-detector
+97 http 304 https://registry.npmjs.org/iconv
+98 verbose headers { date: 'Tue, 10 Oct 2017 03:20:33 GMT',
+98 verbose headers   via: '1.1 varnish',
+98 verbose headers   'cache-control': 'max-age=300',
+98 verbose headers   etag: 'W/"59503922-a11a"',
+98 verbose headers   age: '0',
+98 verbose headers   connection: 'keep-alive',
+98 verbose headers   'x-served-by': 'cache-gru17120-GRU',
+98 verbose headers   'x-cache': 'MISS',
+98 verbose headers   'x-cache-hits': '0',
+98 verbose headers   'x-timer': 'S1507605634.641039,VS0,VE193',
+98 verbose headers   vary: 'Accept-Encoding, Accept' }
+99 silly get cb [ 304,
+99 silly get   { date: 'Tue, 10 Oct 2017 03:20:33 GMT',
+99 silly get     via: '1.1 varnish',
+99 silly get     'cache-control': 'max-age=300',
+99 silly get     etag: 'W/"59503922-a11a"',
+99 silly get     age: '0',
+99 silly get     connection: 'keep-alive',
+99 silly get     'x-served-by': 'cache-gru17120-GRU',
+99 silly get     'x-cache': 'MISS',
+99 silly get     'x-cache-hits': '0',
+99 silly get     'x-timer': 'S1507605634.641039,VS0,VE193',
+99 silly get     vary: 'Accept-Encoding, Accept' } ]
+100 verbose etag https://registry.npmjs.org/iconv from cache
+101 verbose get saving iconv to /home/marcello/.npm/registry.npmjs.org/iconv/.cache.json
+102 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+103 silly resolveWithNewModule iconv@2.2.3 checking installable status
+104 silly cache add args [ 'iconv@~2.2.1', null ]
+105 verbose cache add spec iconv@~2.2.1
+106 silly cache add parsed spec Result {
+106 silly cache add   raw: 'iconv@~2.2.1',
+106 silly cache add   scope: null,
+106 silly cache add   escapedName: 'iconv',
+106 silly cache add   name: 'iconv',
+106 silly cache add   rawSpec: '~2.2.1',
+106 silly cache add   spec: '>=2.2.1 <2.3.0',
+106 silly cache add   type: 'range' }
+107 silly addNamed iconv@>=2.2.1 <2.3.0
+108 verbose addNamed ">=2.2.1 <2.3.0" is a valid semver range for iconv
+109 silly addNameRange { name: 'iconv', range: '>=2.2.1 <2.3.0', hasData: false }
+110 silly mapToRegistry name iconv
+111 silly mapToRegistry using default registry
+112 silly mapToRegistry registry https://registry.npmjs.org/
+113 silly mapToRegistry data Result {
+113 silly mapToRegistry   raw: 'iconv',
+113 silly mapToRegistry   scope: null,
+113 silly mapToRegistry   escapedName: 'iconv',
+113 silly mapToRegistry   name: 'iconv',
+113 silly mapToRegistry   rawSpec: '',
+113 silly mapToRegistry   spec: 'latest',
+113 silly mapToRegistry   type: 'tag' }
+114 silly mapToRegistry uri https://registry.npmjs.org/iconv
+115 verbose addNameRange registry:https://registry.npmjs.org/iconv not in flight; fetching
+116 verbose get https://registry.npmjs.org/iconv not expired, no request
+117 silly addNameRange number 2 { name: 'iconv', range: '>=2.2.1 <2.3.0', hasData: true }
+118 silly addNameRange versions [ 'iconv',
+118 silly addNameRange   [ '1.0.0',
+118 silly addNameRange     '1.0.1',
+118 silly addNameRange     '1.1.0',
+118 silly addNameRange     '1.1.1',
+118 silly addNameRange     '1.1.2',
+118 silly addNameRange     '1.1.3',
+118 silly addNameRange     '1.2.0',
+118 silly addNameRange     '1.2.1',
+118 silly addNameRange     '1.2.2',
+118 silly addNameRange     '1.2.3',
+118 silly addNameRange     '1.2.4',
+118 silly addNameRange     '2.0.0',
+118 silly addNameRange     '2.0.1',
+118 silly addNameRange     '2.0.2',
+118 silly addNameRange     '2.0.3',
+118 silly addNameRange     '2.0.4',
+118 silly addNameRange     '2.0.5',
+118 silly addNameRange     '2.0.6',
+118 silly addNameRange     '2.0.7',
+118 silly addNameRange     '2.1.0',
+118 silly addNameRange     '2.1.1',
+118 silly addNameRange     '2.1.2',
+118 silly addNameRange     '2.1.3',
+118 silly addNameRange     '2.1.4',
+118 silly addNameRange     '2.1.5',
+118 silly addNameRange     '2.1.6',
+118 silly addNameRange     '2.1.7',
+118 silly addNameRange     '2.1.8',
+118 silly addNameRange     '2.1.9',
+118 silly addNameRange     '2.1.10',
+118 silly addNameRange     '2.1.11',
+118 silly addNameRange     '2.2.0',
+118 silly addNameRange     '2.2.1',
+118 silly addNameRange     '2.2.2',
+118 silly addNameRange     '2.2.3',
+118 silly addNameRange     '2.3.0' ] ]
+119 silly addNamed iconv@2.2.3
+120 verbose addNamed "2.2.3" is a plain semver version for iconv
+121 silly cache afterAdd iconv@2.2.3
+122 verbose afterAdd /home/marcello/.npm/iconv/2.2.3/package/package.json not in flight; writing
+123 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+124 verbose afterAdd /home/marcello/.npm/iconv/2.2.3/package/package.json written
+125 http 304 https://registry.npmjs.org/node-icu-charset-detector
+126 verbose headers { date: 'Tue, 10 Oct 2017 03:20:33 GMT',
+126 verbose headers   via: '1.1 varnish',
+126 verbose headers   'cache-control': 'max-age=300',
+126 verbose headers   etag: 'W/"5731e613-4c62"',
+126 verbose headers   age: '0',
+126 verbose headers   connection: 'keep-alive',
+126 verbose headers   'x-served-by': 'cache-gru17120-GRU',
+126 verbose headers   'x-cache': 'MISS',
+126 verbose headers   'x-cache-hits': '0',
+126 verbose headers   'x-timer': 'S1507605634.735305,VS0,VE211',
+126 verbose headers   vary: 'Accept-Encoding, Accept' }
+127 silly get cb [ 304,
+127 silly get   { date: 'Tue, 10 Oct 2017 03:20:33 GMT',
+127 silly get     via: '1.1 varnish',
+127 silly get     'cache-control': 'max-age=300',
+127 silly get     etag: 'W/"5731e613-4c62"',
+127 silly get     age: '0',
+127 silly get     connection: 'keep-alive',
+127 silly get     'x-served-by': 'cache-gru17120-GRU',
+127 silly get     'x-cache': 'MISS',
+127 silly get     'x-cache-hits': '0',
+127 silly get     'x-timer': 'S1507605634.735305,VS0,VE211',
+127 silly get     vary: 'Accept-Encoding, Accept' } ]
+128 verbose etag https://registry.npmjs.org/node-icu-charset-detector from cache
+129 verbose get saving node-icu-charset-detector to /home/marcello/.npm/registry.npmjs.org/node-icu-charset-detector/.cache.json
+130 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+131 silly resolveWithNewModule node-icu-charset-detector@0.2.0 checking installable status
+132 silly cache add args [ 'node-icu-charset-detector@~0.2.0', null ]
+133 verbose cache add spec node-icu-charset-detector@~0.2.0
+134 silly cache add parsed spec Result {
+134 silly cache add   raw: 'node-icu-charset-detector@~0.2.0',
+134 silly cache add   scope: null,
+134 silly cache add   escapedName: 'node-icu-charset-detector',
+134 silly cache add   name: 'node-icu-charset-detector',
+134 silly cache add   rawSpec: '~0.2.0',
+134 silly cache add   spec: '>=0.2.0 <0.3.0',
+134 silly cache add   type: 'range' }
+135 silly addNamed node-icu-charset-detector@>=0.2.0 <0.3.0
+136 verbose addNamed ">=0.2.0 <0.3.0" is a valid semver range for node-icu-charset-detector
+137 silly addNameRange { name: 'node-icu-charset-detector',
+137 silly addNameRange   range: '>=0.2.0 <0.3.0',
+137 silly addNameRange   hasData: false }
+138 silly mapToRegistry name node-icu-charset-detector
+139 silly mapToRegistry using default registry
+140 silly mapToRegistry registry https://registry.npmjs.org/
+141 silly mapToRegistry data Result {
+141 silly mapToRegistry   raw: 'node-icu-charset-detector',
+141 silly mapToRegistry   scope: null,
+141 silly mapToRegistry   escapedName: 'node-icu-charset-detector',
+141 silly mapToRegistry   name: 'node-icu-charset-detector',
+141 silly mapToRegistry   rawSpec: '',
+141 silly mapToRegistry   spec: 'latest',
+141 silly mapToRegistry   type: 'tag' }
+142 silly mapToRegistry uri https://registry.npmjs.org/node-icu-charset-detector
+143 verbose addNameRange registry:https://registry.npmjs.org/node-icu-charset-detector not in flight; fetching
+144 verbose get https://registry.npmjs.org/node-icu-charset-detector not expired, no request
+145 silly addNameRange number 2 { name: 'node-icu-charset-detector',
+145 silly addNameRange   range: '>=0.2.0 <0.3.0',
+145 silly addNameRange   hasData: true }
+146 silly addNameRange versions [ 'node-icu-charset-detector',
+146 silly addNameRange   [ '0.0.1',
+146 silly addNameRange     '0.0.2',
+146 silly addNameRange     '0.0.3',
+146 silly addNameRange     '0.0.4',
+146 silly addNameRange     '0.0.5',
+146 silly addNameRange     '0.0.6',
+146 silly addNameRange     '0.0.7',
+146 silly addNameRange     '0.1.0',
+146 silly addNameRange     '0.1.1',
+146 silly addNameRange     '0.1.2',
+146 silly addNameRange     '0.1.3',
+146 silly addNameRange     '0.1.4',
+146 silly addNameRange     '0.2.0' ] ]
+147 silly addNamed node-icu-charset-detector@0.2.0
+148 verbose addNamed "0.2.0" is a plain semver version for node-icu-charset-detector
+149 silly cache afterAdd node-icu-charset-detector@0.2.0
+150 verbose afterAdd /home/marcello/.npm/node-icu-charset-detector/0.2.0/package/package.json not in flight; writing
+151 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+152 verbose afterAdd /home/marcello/.npm/node-icu-charset-detector/0.2.0/package/package.json written
+153 silly fetchNamedPackageData nan
+154 silly mapToRegistry name nan
+155 silly mapToRegistry using default registry
+156 silly mapToRegistry registry https://registry.npmjs.org/
+157 silly mapToRegistry data Result {
+157 silly mapToRegistry   raw: 'nan',
+157 silly mapToRegistry   scope: null,
+157 silly mapToRegistry   escapedName: 'nan',
+157 silly mapToRegistry   name: 'nan',
+157 silly mapToRegistry   rawSpec: '',
+157 silly mapToRegistry   spec: 'latest',
+157 silly mapToRegistry   type: 'tag' }
+158 silly mapToRegistry uri https://registry.npmjs.org/nan
+159 verbose request uri https://registry.npmjs.org/nan
+160 verbose request no auth needed
+161 info attempt registry request try #1 at 12:20:33 AM
+162 verbose etag W/"59c33594-20237"
+163 verbose lastModified Thu, 21 Sep 2017 03:44:20 GMT
+164 http request GET https://registry.npmjs.org/nan
+165 http 304 https://registry.npmjs.org/nan
+166 verbose headers { date: 'Tue, 10 Oct 2017 03:20:34 GMT',
+166 verbose headers   via: '1.1 varnish',
+166 verbose headers   'cache-control': 'max-age=300',
+166 verbose headers   etag: 'W/"59c33594-20237"',
+166 verbose headers   age: '202',
+166 verbose headers   connection: 'keep-alive',
+166 verbose headers   'x-served-by': 'cache-gru17120-GRU',
+166 verbose headers   'x-cache': 'HIT',
+166 verbose headers   'x-cache-hits': '1',
+166 verbose headers   'x-timer': 'S1507605634.340487,VS0,VE3',
+166 verbose headers   vary: 'Accept-Encoding, Accept' }
+167 silly get cb [ 304,
+167 silly get   { date: 'Tue, 10 Oct 2017 03:20:34 GMT',
+167 silly get     via: '1.1 varnish',
+167 silly get     'cache-control': 'max-age=300',
+167 silly get     etag: 'W/"59c33594-20237"',
+167 silly get     age: '202',
+167 silly get     connection: 'keep-alive',
+167 silly get     'x-served-by': 'cache-gru17120-GRU',
+167 silly get     'x-cache': 'HIT',
+167 silly get     'x-cache-hits': '1',
+167 silly get     'x-timer': 'S1507605634.340487,VS0,VE3',
+167 silly get     vary: 'Accept-Encoding, Accept' } ]
+168 verbose etag https://registry.npmjs.org/nan from cache
+169 verbose get saving nan to /home/marcello/.npm/registry.npmjs.org/nan/.cache.json
+170 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+171 silly resolveWithNewModule nan@2.7.0 checking installable status
+172 silly cache add args [ 'nan@^2.3.5', null ]
+173 verbose cache add spec nan@^2.3.5
+174 silly cache add parsed spec Result {
+174 silly cache add   raw: 'nan@^2.3.5',
+174 silly cache add   scope: null,
+174 silly cache add   escapedName: 'nan',
+174 silly cache add   name: 'nan',
+174 silly cache add   rawSpec: '^2.3.5',
+174 silly cache add   spec: '>=2.3.5 <3.0.0',
+174 silly cache add   type: 'range' }
+175 silly addNamed nan@>=2.3.5 <3.0.0
+176 verbose addNamed ">=2.3.5 <3.0.0" is a valid semver range for nan
+177 silly addNameRange { name: 'nan', range: '>=2.3.5 <3.0.0', hasData: false }
+178 silly mapToRegistry name nan
+179 silly mapToRegistry using default registry
+180 silly mapToRegistry registry https://registry.npmjs.org/
+181 silly mapToRegistry data Result {
+181 silly mapToRegistry   raw: 'nan',
+181 silly mapToRegistry   scope: null,
+181 silly mapToRegistry   escapedName: 'nan',
+181 silly mapToRegistry   name: 'nan',
+181 silly mapToRegistry   rawSpec: '',
+181 silly mapToRegistry   spec: 'latest',
+181 silly mapToRegistry   type: 'tag' }
+182 silly mapToRegistry uri https://registry.npmjs.org/nan
+183 verbose addNameRange registry:https://registry.npmjs.org/nan not in flight; fetching
+184 verbose get https://registry.npmjs.org/nan not expired, no request
+185 silly addNameRange number 2 { name: 'nan', range: '>=2.3.5 <3.0.0', hasData: true }
+186 silly addNameRange versions [ 'nan',
+186 silly addNameRange   [ '0.3.0-wip',
+186 silly addNameRange     '0.3.0-wip2',
+186 silly addNameRange     '0.3.0',
+186 silly addNameRange     '0.3.1',
+186 silly addNameRange     '0.3.2',
+186 silly addNameRange     '0.4.0',
+186 silly addNameRange     '0.4.1',
+186 silly addNameRange     '0.4.2',
+186 silly addNameRange     '0.4.3',
+186 silly addNameRange     '0.4.4',
+186 silly addNameRange     '0.5.0',
+186 silly addNameRange     '0.5.1',
+186 silly addNameRange     '0.5.2',
+186 silly addNameRange     '0.6.0',
+186 silly addNameRange     '0.7.0',
+186 silly addNameRange     '0.7.1',
+186 silly addNameRange     '0.8.0',
+186 silly addNameRange     '1.0.0',
+186 silly addNameRange     '1.1.0',
+186 silly addNameRange     '1.1.1',
+186 silly addNameRange     '1.1.2',
+186 silly addNameRange     '1.2.0',
+186 silly addNameRange     '1.3.0',
+186 silly addNameRange     '1.4.0',
+186 silly addNameRange     '1.4.1',
+186 silly addNameRange     '1.5.0',
+186 silly addNameRange     '1.4.2',
+186 silly addNameRange     '1.4.3',
+186 silly addNameRange     '1.5.1',
+186 silly addNameRange     '1.5.2',
+186 silly addNameRange     '1.6.0',
+186 silly addNameRange     '1.5.3',
+186 silly addNameRange     '1.6.1',
+186 silly addNameRange     '1.6.2',
+186 silly addNameRange     '1.7.0',
+186 silly addNameRange     '1.8.0',
+186 silly addNameRange     '1.8.1',
+186 silly addNameRange     '1.8.2',
+186 silly addNameRange     '1.8.3',
+186 silly addNameRange     '1.8.4',
+186 silly addNameRange     '1.9.0',
+186 silly addNameRange     '2.0.0',
+186 silly addNameRange     '2.0.1',
+186 silly addNameRange     '2.0.2',
+186 silly addNameRange     '2.0.3',
+186 silly addNameRange     '2.0.4',
+186 silly addNameRange     '2.0.5',
+186 silly addNameRange     '2.0.6',
+186 silly addNameRange     '2.0.7',
+186 silly addNameRange     '2.0.8',
+186 silly addNameRange     '2.0.9',
+186 silly addNameRange     '2.1.0',
+186 silly addNameRange     '2.2.0',
+186 silly addNameRange     '2.2.1',
+186 silly addNameRange     '2.3.0',
+186 silly addNameRange     '2.3.1',
+186 silly addNameRange     '2.3.2',
+186 silly addNameRange     '2.3.3',
+186 silly addNameRange     '2.3.4',
+186 silly addNameRange     '2.3.5',
+186 silly addNameRange     '2.4.0',
+186 silly addNameRange     '2.5.0',
+186 silly addNameRange     '2.5.1',
+186 silly addNameRange     '2.6.0',
+186 silly addNameRange     '2.6.1',
+186 silly addNameRange     '2.6.2',
+186 silly addNameRange     '2.7.0' ] ]
+187 silly addNamed nan@2.7.0
+188 verbose addNamed "2.7.0" is a plain semver version for nan
+189 silly cache afterAdd nan@2.7.0
+190 verbose afterAdd /home/marcello/.npm/nan/2.7.0/package/package.json not in flight; writing
+191 verbose correctMkdir /home/marcello/.npm correctMkdir not in flight; initializing
+192 verbose afterAdd /home/marcello/.npm/nan/2.7.0/package/package.json written
+193 silly loadAllDepsIntoIdealTree Finishing
+194 silly loadIdealTree Finishing
+195 silly currentTree marcello
+195 silly currentTree ├── accepts@1.3.3
+195 silly currentTree ├── amqplib@0.5.1
+195 silly currentTree ├── array-flatten@1.1.1
+195 silly currentTree ├── bitsyntax@0.0.4
+195 silly currentTree ├── bluebird@3.5.0
+195 silly currentTree ├─┬ body-parser@1.17.2
+195 silly currentTree │ ├── debug@2.6.7
+195 silly currentTree │ └── ms@2.0.0
+195 silly currentTree ├── buffer-more-ints@0.0.2
+195 silly currentTree ├── bytes@2.4.0
+195 silly currentTree ├── content-disposition@0.5.2
+195 silly currentTree ├── content-type@1.0.2
+195 silly currentTree ├── cookie-parser@1.4.3
+195 silly currentTree ├── cookie-signature@1.0.6
+195 silly currentTree ├── cookie@0.3.1
+195 silly currentTree ├── core-util-is@1.0.2
+195 silly currentTree ├── debug@2.6.1
+195 silly currentTree ├── depd@1.1.0
+195 silly currentTree ├── destroy@1.0.4
+195 silly currentTree ├── ee-first@1.1.1
+195 silly currentTree ├── encodeurl@1.0.1
+195 silly currentTree ├── escape-html@1.0.3
+195 silly currentTree ├── etag@1.8.0
+195 silly currentTree ├── express@4.15.2
+195 silly currentTree ├─┬ finalhandler@1.0.1
+195 silly currentTree │ └── debug@2.6.3
+195 silly currentTree ├── forwarded@0.1.0
+195 silly currentTree ├── fresh@0.5.0
+195 silly currentTree ├── http-errors@1.6.1
+195 silly currentTree ├── iconv-lite@0.4.15
+195 silly currentTree ├── inherits@2.0.3
+195 silly currentTree ├── ipaddr.js@1.3.0
+195 silly currentTree ├── irc-colors@1.3.3
+195 silly currentTree ├── irc@0.5.2
+195 silly currentTree ├── isarray@0.0.1
+195 silly currentTree ├── media-typer@0.3.0
+195 silly currentTree ├── merge-descriptors@1.0.1
+195 silly currentTree ├── methods@1.1.2
+195 silly currentTree ├── mime-db@1.27.0
+195 silly currentTree ├── mime-types@2.1.15
+195 silly currentTree ├── mime@1.3.4
+195 silly currentTree ├── ms@0.7.2
+195 silly currentTree ├── negotiator@0.6.1
+195 silly currentTree ├── on-finished@2.3.0
+195 silly currentTree ├── parseurl@1.3.1
+195 silly currentTree ├── path-to-regexp@0.1.7
+195 silly currentTree ├── proxy-addr@1.1.4
+195 silly currentTree ├── qs@6.4.0
+195 silly currentTree ├── range-parser@1.2.0
+195 silly currentTree ├── raw-body@2.2.0
+195 silly currentTree ├── readable-stream@1.1.14
+195 silly currentTree ├── send@0.15.1
+195 silly currentTree ├── serve-static@1.12.1
+195 silly currentTree ├── setprototypeof@1.0.3
+195 silly currentTree ├── statuses@1.3.1
+195 silly currentTree ├── string_decoder@0.10.31
+195 silly currentTree ├── type-is@1.6.15
+195 silly currentTree ├── unpipe@1.0.0
+195 silly currentTree ├── utils-merge@1.0.0
+195 silly currentTree └── vary@1.1.1
+196 silly idealTree marcello
+196 silly idealTree ├── accepts@1.3.3
+196 silly idealTree ├── amqplib@0.5.1
+196 silly idealTree ├── array-flatten@1.1.1
+196 silly idealTree ├── bitsyntax@0.0.4
+196 silly idealTree ├── bluebird@3.5.0
+196 silly idealTree ├─┬ body-parser@1.17.2
+196 silly idealTree │ ├── debug@2.6.7
+196 silly idealTree │ └── ms@2.0.0
+196 silly idealTree ├── buffer-more-ints@0.0.2
+196 silly idealTree ├── bytes@2.4.0
+196 silly idealTree ├── content-disposition@0.5.2
+196 silly idealTree ├── content-type@1.0.2
+196 silly idealTree ├── cookie-parser@1.4.3
+196 silly idealTree ├── cookie-signature@1.0.6
+196 silly idealTree ├── cookie@0.3.1
+196 silly idealTree ├── core-util-is@1.0.2
+196 silly idealTree ├── debug@2.6.1
+196 silly idealTree ├── depd@1.1.0
+196 silly idealTree ├── destroy@1.0.4
+196 silly idealTree ├── ee-first@1.1.1
+196 silly idealTree ├── encodeurl@1.0.1
+196 silly idealTree ├── escape-html@1.0.3
+196 silly idealTree ├── etag@1.8.0
+196 silly idealTree ├── express@4.15.2
+196 silly idealTree ├─┬ finalhandler@1.0.1
+196 silly idealTree │ └── debug@2.6.3
+196 silly idealTree ├── forwarded@0.1.0
+196 silly idealTree ├── fresh@0.5.0
+196 silly idealTree ├── http-errors@1.6.1
+196 silly idealTree ├── iconv-lite@0.4.15
+196 silly idealTree ├── iconv@2.2.3
+196 silly idealTree ├── inherits@2.0.3
+196 silly idealTree ├── ipaddr.js@1.3.0
+196 silly idealTree ├── irc-colors@1.3.3
+196 silly idealTree ├── irc@0.5.2
+196 silly idealTree ├── isarray@0.0.1
+196 silly idealTree ├── media-typer@0.3.0
+196 silly idealTree ├── merge-descriptors@1.0.1
+196 silly idealTree ├── methods@1.1.2
+196 silly idealTree ├── mime-db@1.27.0
+196 silly idealTree ├── mime-types@2.1.15
+196 silly idealTree ├── mime@1.3.4
+196 silly idealTree ├── ms@0.7.2
+196 silly idealTree ├── nan@2.7.0
+196 silly idealTree ├── negotiator@0.6.1
+196 silly idealTree ├── node-icu-charset-detector@0.2.0
+196 silly idealTree ├── on-finished@2.3.0
+196 silly idealTree ├── parseurl@1.3.1
+196 silly idealTree ├── path-to-regexp@0.1.7
+196 silly idealTree ├── proxy-addr@1.1.4
+196 silly idealTree ├── qs@6.4.0
+196 silly idealTree ├── queue@4.4.1
+196 silly idealTree ├── range-parser@1.2.0
+196 silly idealTree ├── raw-body@2.2.0
+196 silly idealTree ├── readable-stream@1.1.14
+196 silly idealTree ├── send@0.15.1
+196 silly idealTree ├── serve-static@1.12.1
+196 silly idealTree ├── setprototypeof@1.0.3
+196 silly idealTree ├── statuses@1.3.1
+196 silly idealTree ├── string_decoder@0.10.31
+196 silly idealTree ├── type-is@1.6.15
+196 silly idealTree ├── unpipe@1.0.0
+196 silly idealTree ├── utils-merge@1.0.0
+196 silly idealTree └── vary@1.1.1
+197 silly generateActionsToTake Starting
+198 silly install generateActionsToTake
+199 warn checkPermissions Missing write access to /home/marcello/node_modules
+200 silly rollbackFailedOptional Starting
+201 silly rollbackFailedOptional Finishing
+202 silly runTopLevelLifecycles Finishing
+203 silly install printInstalled
+204 warn enoent ENOENT: no such file or directory, open '/home/marcello/package.json'
+205 verbose enoent ENOENT: no such file or directory, open '/home/marcello/package.json'
+205 verbose enoent This is most likely not a problem with npm itself
+205 verbose enoent and is related to npm not being able to find a file.
+206 warn marcello No description
+207 verbose If you need help, you may report this error at:
+207 verbose     <https://github.com/npm/npm/issues>
+208 warn marcello No repository field.
+209 verbose If you need help, you may report this error at:
+209 verbose     <https://github.com/npm/npm/issues>
+210 warn marcello No README data
+211 verbose If you need help, you may report this error at:
+211 verbose     <https://github.com/npm/npm/issues>
+212 warn marcello No license field.
+213 verbose If you need help, you may report this error at:
+213 verbose     <https://github.com/npm/npm/issues>
+214 warn You are using a pre-release version of node and things may not work as expected
+215 verbose If you need help, you may report this error at:
+215 verbose     <https://github.com/npm/npm/issues>
+216 verbose stack Error: EACCES: permission denied, access '/home/marcello/node_modules'
+217 verbose cwd /home/marcello/socketComSemaforo
+218 error Linux 3.19.0-80-generic
+219 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "queue" "--save"
+220 error node v8.0.0-pre
+221 error npm  v4.0.5
+222 error path /home/marcello/node_modules
+223 error code EACCES
+224 error errno -13
+225 error syscall access
+226 error Error: EACCES: permission denied, access '/home/marcello/node_modules'
+226 error  { Error: EACCES: permission denied, access '/home/marcello/node_modules'
+226 error   errno: -13,
+226 error   code: 'EACCES',
+226 error   syscall: 'access',
+226 error   path: '/home/marcello/node_modules' }
+227 error Please try running this command again as root/Administrator.
+228 verbose exit [ -13, true ]
