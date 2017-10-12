@@ -1,8 +1,10 @@
 #!/usr/bin/python
-# -*- coding: utf-8 -*-
+# -- coding: utf-8 --
 
 import socket
 import thread
+from Queue import Queue
+from threading import Thread
 from scbl import BufferLimitado
 
 b = BufferLimitado()
@@ -20,12 +22,12 @@ def produzir(item):
     b.insert(item)
     print "PRODUTOR. item: ", item , " b.livre: ", b.livre, " b.cheio: ", b.cheio
 
-def consumidor():
+def consumidor(self):
     item = b.remove()
     print " CONSUMIDOR. item: ", item , " b.livre: ", b.livre, " b.cheio: ",  b.cheio
     return item
 
-
+item = Queue(maxsize=0)
 
 while 1:
     conn, addr = sock.accept()
@@ -35,11 +37,13 @@ while 1:
     acao = arrAcao[0]
     print 'Ação: ' + acao
     item = arrAcao[1]
-    print 'Item: ' + item
+    #print 'Item: ' + item
     if acao == 'Produzir':
         thread.start_new_thread(produzir, (item, ))
     elif acao == 'Consumir':
-        res = thread.start_new_thread(consumidor, ())
+        res = Thread(target=consumidor, args=(item,))
+ 	res.setDaemon(True)
+ 	res.start()
         resStr = str(res)
-        print 'res ainda no server: ' + resStr
+        print 'res: ' + resStr
         conn.send(resStr)
