@@ -3,7 +3,8 @@
 
 import socket
 import thread
-from Queue import Queue
+import threading
+from multiprocessing import Queue
 from threading import Thread
 from scbl import BufferLimitado
 
@@ -18,16 +19,16 @@ print "Socket associado à porta %s" %(port)
 sock.listen(5)
 print "Socket está rodando"
 
+queue = Queue() 
+
 def produzir(item):
     b.insert(item)
     print "PRODUTOR. item: ", item , " b.livre: ", b.livre, " b.cheio: ", b.cheio
 
 def consumidor(self):
     item = b.remove()
+    queue.put(item)
     print " CONSUMIDOR. item: ", item , " b.livre: ", b.livre, " b.cheio: ",  b.cheio
-    return item
-
-item = Queue(maxsize=0)
 
 while 1:
     conn, addr = sock.accept()
@@ -41,9 +42,7 @@ while 1:
     if acao == 'Produzir':
         thread.start_new_thread(produzir, (item, ))
     elif acao == 'Consumir':
-        res = Thread(target=consumidor, args=(item,))
- 	res.setDaemon(True)
- 	res.start()
-        resStr = str(res)
-        print 'res: ' + resStr
-        conn.send(resStr)
+        thread_ = threading.Thread(target=consumidor, args=(item, ))
+        thread_.start()
+        thread_.join()
+        conn.send(queue.get())
